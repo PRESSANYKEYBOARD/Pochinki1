@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+ "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias type="user.bean.UserDTO" alias="user" />
+	</typeAliases>
+	
+	<!-- 	
+	<mappers>
+		<mapper resource="user/dao/userMapper.xml" />
+	</mappers> --> <!-- 스프링에서 하겠으니 여긴 안하겠다. /말고 .쓰면 에러가 난다. -->
+</configuration>

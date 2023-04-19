@@ -1,0 +1,185 @@
+@charset "UTF-8";
+
+body {
+	text-align: center;
+	height: 100%;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, .5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 반응형 웹 */
+.title { font-size: 18px; }
+
+@media (max-width: 1023px) {
+  .title { font-size: 16px; }
+}
+
+@media (max-width: 767px) {
+  .title { font-size: 14px; }
+}
+
+@media (max-width: 639px) {
+  .title { font-size: 12px; }
+} /* 반응형 웹 */
+
+.header strong { /* 펀딩 참여 전 확인하세요!!! */
+	display: block;
+    font-size: 26px;
+    line-height: 1.12;
+    color: #000;
+    letter-spacing: -.2px;
+}
+	
+.container { /* 펀딩은 ~ 예야 결제를 취소~ */
+	padding-top: 16px;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.notice { 
+	padding: 10px 0;
+    margin-top: 15px;
+    background-color: #f7f7f7;
+}
+
+.notice span {
+	font-weight: 700;
+	color: #0091ff;
+}	
+
+.point { /* ~일이 가장 빠른 결제입니다. */
+	font-size: 14px;
+    line-height: 1.43;
+    letter-spacing: -.1px;
+}
+
+.guide { /* 결제 이후에는 ~ */
+    padding: 16px 0 14px;
+    margin-top: 18px;
+    border: 1px solid #ddd;
+    border-width: 1px 0;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #666;
+    letter-spacing: -.1px;
+    text-align: left;
+}
+
+.agree {  /* 약관 동의 */
+    padding: 14px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.agree_all { /* 모두 동의 */
+	margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(0,0,0,.03);
+}
+
+.agree_need { /* 필수 동의 */
+	position: relative;
+    min-height: 19px;
+    padding-left: 25px;
+    font-size: 12px;
+    line-height: 19px;
+    color: #202020;
+    text-align: left;
+    letter-spacing: -.3px;
+}
+
+.agreeguide_link { /* 자세히 보기 */
+	display: inline-block;
+    margin-left: 8px;
+    text-decoration: underline;
+    vertical-align: top;
+}
+
+/* .agreeguide_preview { 약관 동의
+	overflow-x: hidden;
+    overflow-y: auto;
+    height: 87px;
+    margin-top: 7px;
+    border: 1px solid #e0e0e0;
+    padding: 14px;
+    font-size: 12px;
+    line-height: 17px;
+    color: #828282;
+    text-align: left;
+} */
+
+.agreeguide_preview textarea { /* 약관 개정안내 */
+	font-size: 12px;
+	padding: 14px;
+	width: 96%;
+	height: 90px; 
+	margin: 0 2%;
+	background-color: #f7f7f7;
+	color: #888; 
+	border: none;
+}
+
+.agree_choice { /* 선택 동의 */
+	position: relative;
+    min-height: 19px;
+    padding-left: 25px;
+    font-size: 12px;
+    line-height: 19px;
+    color: #202020;
+    text-align: left;
+    letter-spacing: -.3px;
+}
+
+.agree_choice_text { /* 선택 동의 창 밑에 있는 텍스트 */
+	padding-left: 45px;
+	margin-top: 8px;
+    font-size: 12px;
+    line-height: 17px;
+    text-align: left;
+    color: #828282;
+}
+
+.agree_button { /* 동의.비동의 버튼 div */
+	margin-top: 20px;
+}
+
+.button_disagree { /* 비동의 버튼 */
+	display: inline-block;
+    width: 120px;
+    height: 50px;
+    padding-top: 3px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -1px;
+}
+
+.button_agree { /* 동의 버튼 */
+	display: inline-block;
+    width: 120px;
+    height: 50px;
+    padding-top: 3px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -1px;
+	margin-left: 16px;
+    background-color: #1f9eff;
+}
+
+.btn-close { /* 모달 창 닫기 버튼 */
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+}
