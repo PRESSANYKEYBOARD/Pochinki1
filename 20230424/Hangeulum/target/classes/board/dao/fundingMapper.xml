@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="fundingSQL">
+ 
+ <insert id="fundingWrite" parameterType="board.bean.FundingDTO">
+    <selectKey keyProperty="boardFSeq" resultType="int" order="BEFORE">
+        select seq_boardFSeq.nextval from dual
+    </selectKey>
+    insert into boardF (boardFSeq, userId, boardFExpireDate, boardFIsExpired, boardFSubject, boardFGoalPercet, boardFGoalAmount, boardFRealAmount, boardFContent, boardFSendDate, boardFTotRewardCnt, boardFSoldRewardCount, fileName) 
+    values (#{boardFSeq}, #{userId}, #{boardFExpireDate}, #{boardFIsExpired}, #{boardFSubject}, #{boardFGoalPercet, jdbcType=NUMERIC}, #{boardFGoalAmount}, #{boardFRealAmount}, #{boardFContent}, #{boardFSendDate}, #{boardFTotRewardCnt}, #{boardFSoldRewardCount}, #{fileName})
+</insert>
+ 
+</mapper>
