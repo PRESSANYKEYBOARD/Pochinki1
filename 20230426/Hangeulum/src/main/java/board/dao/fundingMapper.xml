@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="fundingSQL">
+	
+	<!-- 펀딩 댓글에서 boardF 게시글 번호와 일치하는지?  -->
+	<!-- <select id="selectBoardF" resultMap="boardFMap">
+	  select boardFSeq, userId, boardFExpireDate, boardFIsExpired, boardFSubject, boardFGoalAmount, boardFContent, boardFSendDate, boardFTotRewardCnt
+	  from boardF
+	  where boardFSeq = #{boardFSeq}
+	</select> -->
+ 
+ 	<insert id="fundingWrite" parameterType="board.bean.FundingDTO">
+	    insert into boardF(boardFSeq,
+	    					userId,
+	    					boardFExpireDate,
+	    					boardFIsExpired,
+	    					boardFSubject,
+	    					boardFGoalAmount,
+	    					boardFContent,
+	    					boardFSendDate,
+	    					boardFTotRewardCnt
+	    				)
+	     			values(SEQ_BOARDFSEQ.nextval,
+	     						#{userId},
+		 						#{boardFExpireDate},
+		 						#{boardFIsExpired},
+		 						#{boardFSubject},
+		 						#{boardFGoalAmount},
+		 						#{boardFContent},
+		 						#{boardFSendDate},
+		 						#{boardFTotRewardCnt}
+		 				)
+	</insert>
+	
+	<select id="getCommentListByBoardSeq" resultType="board.bean.FundingCommentDTO">
+	    SELECT * FROM COMMNET_F WHERE boardFSeq = #{boardFSeq}
+	</select>
+    
+</mapper>
